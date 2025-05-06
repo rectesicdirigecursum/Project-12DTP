@@ -1,5 +1,5 @@
-
-
+# a python programme to input data into the debate motions database
+# 22343 - Thu 1 May
 
 import sqlite3
 
