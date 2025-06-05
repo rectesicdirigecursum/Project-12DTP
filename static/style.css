@@ -1,0 +1,127 @@
+:root {
+    --rich-black: #0d1b2a;
+    --oxford-blue: #1b263b;
+    --yinmn-blue: #415a77;
+    --silver-lake-blue: #778da9;
+    --platinum: #e0e1dd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--platinum);
+    background-color: var(--rich-black);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: var(--oxford-blue);
+}
+
+/* Motion class */
+.motion {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.2;
+    margin: 2rem 0;
+    color: var(--platinum);
+}
+
+.motion * {
+    font-family: inherit;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+button, .btn {
+    background-color: var(--yinmn-blue);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: var(--oxford-blue);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--silver-lake-blue);
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--yinmn-blue);
+}
+
+.rounded {
+    border-radius: 8px;
+}
+
+.rounded-lg {
+    border-radius: 12px;
+}
+
+nav {
+    background-color: var(--oxford-blue);
+    padding: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav li {
+    margin-right: 2rem;
+}
+
+nav a {
+    color: var(--platinum);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--silver-lake-blue);
+}
+
+footer {
+    padding: 2rem;
+    margin-top: auto;
+}
+
+footer p {
+    margin-bottom: 0;
+    color: var(--silver-lake-blue);
+}
