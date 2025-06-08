@@ -19,6 +19,10 @@ body {
     background-color: var(--rich-black);
 }
 
+.motion * {
+    font-family: inherit;
+}
+
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
     font-weight: 600;
@@ -33,36 +37,47 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     line-height: 1.2;
     margin: 2rem 0;
+    padding: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
     color: var(--platinum);
-}
-
-.motion * {
-    font-family: inherit;
+    line-height: 4rem;
 }
 
 p {
     margin-bottom: 1rem;
 }
 
-button, .btn {
-    background-color: var(--yinmn-blue);
-    color: white;
+button {
+    background-color: var(--oxford-blue);
+    color: var(--silver-lake-blue);
     border: none;
     padding: 12px 24px;
-    border-radius: 8px;
+    border-radius: 14px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
+    opacity: 1;
 }
 
-button:hover, .btn:hover {
+button:hover {
     background-color: var(--oxford-blue);
+    opacity: 0.8;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+.button-center {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
 }
 
 input, textarea, select {
@@ -78,14 +93,6 @@ input, textarea, select {
 input:focus, textarea:focus, select:focus {
     outline: none;
     border-color: var(--yinmn-blue);
-}
-
-.rounded {
-    border-radius: 8px;
-}
-
-.rounded-lg {
-    border-radius: 12px;
 }
 
 nav {
@@ -108,7 +115,7 @@ nav li {
 nav a {
     color: var(--platinum);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 
