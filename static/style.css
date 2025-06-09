@@ -55,7 +55,7 @@ button {
     padding: 12px 24px;
     border-radius: 14px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
     transition: background-color 0.3s ease;
     opacity: 1;
 }
@@ -131,4 +131,67 @@ footer {
 footer p {
     margin-bottom: 0;
     color: var(--silver-lake-blue);
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-left: 15rem;
+    padding-right: 15rem;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+}
+
+.menu-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-width: 200px;
+    gap: 0.5rem;
+}
+
+.menu-group.left {
+    justify-content: flex-start;
+}
+
+.menu-group.right {
+    justify-content: flex-end;
+}
+
+.menu-group label {
+    color: var(--platinum);
+    font-weight: 500;
+    font-size: 16px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.menu-group select {
+    background-color: var(--rich-black);
+    color: var(--platinum);
+    border: 2px solid var(--oxford-blue);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+    margin-bottom: 0;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.menu-group select:hover {
+    border-color: var(--yinmn-blue);
+    background-color: var(--oxford-blue);
+}
+
+.menu-group select:focus {
+    outline: none;
+    border-color: var(--yinmn-blue);
+    background-color: var(--oxford-blue);
+}
+
+.menu-group select option {
+    background-color: var(--oxford-blue);
+    color: var(--platinum);
+    padding: 8px;
 }
