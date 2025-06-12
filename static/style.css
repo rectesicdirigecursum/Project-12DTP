@@ -21,6 +21,7 @@ body {
 
 .motion * {
     font-family: inherit;
+    color: inherit;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -29,19 +30,38 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--oxford-blue);
 }
 
+em {
+    font-style: italic;
+}
+
 /* Motion class */
 .motion {
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
     font-weight: 700;
     text-align: center;
-    line-height: 1.2;
-    margin: 2rem 0;
-    padding: 2rem;
+    line-height: 4rem;
     padding-left: 4rem;
     padding-right: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 0rem;
     color: var(--platinum);
-    line-height: 4rem;
+}
+
+.infoslide {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 2rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    color: var(--platinum);
+}
+
+.infoslide * {
+    font-family: inherit;
+    color: inherit;
 }
 
 p {
@@ -49,20 +69,25 @@ p {
 }
 
 button {
-    background-color: var(--oxford-blue);
     color: var(--silver-lake-blue);
-    border: none;
-    padding: 12px 24px;
+    background-color: var(--rich-black);
+    border: 2px solid var(--oxford-blue);
     border-radius: 14px;
+    padding: 18px 24px;
+    font-size: 16px;
     cursor: pointer;
-    font-size: 20px;
-    transition: background-color 0.3s ease;
-    opacity: 1;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 button:hover {
+    border-color: var(--yinmn-blue);
     background-color: var(--oxford-blue);
-    opacity: 0.8;
+}
+
+button:focus {
+    outline: none;
+    border-color: var(--yinmn-blue);
+    background-color: var(--oxford-blue);
 }
 
 .button-center {
@@ -130,7 +155,7 @@ footer {
 
 footer p {
     margin-bottom: 0;
-    color: var(--silver-lake-blue);
+    color: var (--silver-lake-blue);
 }
 
 .menu-container {
@@ -139,11 +164,12 @@ footer p {
     align-items: flex-end;
     padding-left: 15rem;
     padding-right: 15rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-bottom: 5rem;
 }
 
 .menu-group {
+    color: var(--silver-lake-blue);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -160,7 +186,6 @@ footer p {
 }
 
 .menu-group label {
-    color: var(--platinum);
     font-weight: 500;
     font-size: 16px;
     white-space: nowrap;
@@ -168,11 +193,11 @@ footer p {
 }
 
 .menu-group select {
+    color: var(--silver-lake-blue);
     background-color: var(--rich-black);
-    color: var(--platinum);
     border: 2px solid var(--oxford-blue);
     border-radius: 8px;
-    padding: 10px 12px;
+    padding: 10px 20px 10px 20px;
     font-size: 14px;
     margin-bottom: 0;
     cursor: pointer;
