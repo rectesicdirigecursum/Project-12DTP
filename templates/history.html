@@ -1,3 +1,132 @@
 {% extends 'layout.html' %}
 {% block content %}
+
+<!-- History page: displays all of the debate motions that the user has read before. The user can sort by date, category, and difficulty. -->
+<!-- Data will be retrieved from the SQLite database and displayed in a table on the website with the columns: Date, Motion, Category, Difficulty. -->
+<!-- The user can also delete items from the history page. -->
+
+<div class="motion">
+    <p>Motion History</p>
+</div>
+
+<div class="dropdown-container">
+    <div class="dropdown-group left">
+        <label for="sort-by">Sort by:</label>
+        <select id="sort-by" name="sort-by">
+            <option value="date">Date (Newest first)</option>
+            <option value="date-old">Date (Oldest first)</option>
+            <option value="category">Category</option>
+            <option value="difficulty">Difficulty</option>
+        </select>
+    </div>
+    
+    <div class="dropdown-group center">
+        <label for="filter-category">Filter by Category:</label>
+        <select id="filter-category" name="filter-category">
+            <option value="all">All Categories</option>
+            <option value="social-movements">Social movements & activism</option>
+            <option value="youth">Youth</option>
+            <option value="economics-trade">Economics & trade</option>
+            <option value="international-relations">International relations</option>
+            <option value="technology-innovation">Technology & innovation</option>
+            <option value="environment">Environment</option>
+            <option value="law">Law</option>
+            <option value="crime">Crime</option>
+            <option value="ethics">Ethics</option>
+            <option value="urban-planning">Urban planning</option>
+            <option value="politics-governance">Politics & governance</option>
+        </select>
+    </div>
+    
+    <div class="dropdown-group right">
+        <label for="filter-difficulty">Filter by Difficulty:</label>
+        <select id="filter-difficulty" name="filter-difficulty">
+            <option value="all">All Difficulties</option>
+            <option value="junior">Junior</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="senior">Senior</option>
+        </select>
+    </div>
+</div>
+
+<div class="history-container">
+    <table class="history-table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Motion</th>
+                <th>Category</th>
+                <th>Difficulty</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-category="ethics" data-difficulty="senior" data-date="2025-06-17">
+                <td>17 Jun 2025</td>
+                <td><em>This House</em>, as a large multinational corporation, <em>would</em> prioritise donating to secular charities rather than religious ones.</td>
+                <td>Ethics</td>
+                <td>Senior</td>
+                <td>
+                    <button class="action-button view-button">View</button>
+                    <button class="action-button delete-button">Delete</button>
+                </td>
+            </tr>
+            <tr data-category="environment" data-difficulty="intermediate" data-date="2025-06-16">
+                <td>16 Jun 2025</td>
+                <td><em>This House</em> <em>would</em> ban single-use plastics in all developed nations.</td>
+                <td>Environment</td>
+                <td>Intermediate</td>
+                <td>
+                    <button class="action-button view-button">View</button>
+                    <button class="action-button delete-button">Delete</button>
+                </td>
+            </tr>
+            <tr data-category="technology-innovation" data-difficulty="senior" data-date="2025-06-15">
+                <td>15 Jun 2025</td>
+                <td><em>This House</em> <em>would</em> require all AI systems to be open source.</td>
+                <td>Technology & innovation</td>
+                <td>Senior</td>
+                <td>
+                    <button class="action-button view-button">View</button>
+                    <button class="action-button delete-button">Delete</button>
+                </td>
+            </tr>
+            <tr data-category="youth" data-difficulty="junior" data-date="2025-06-14">
+                <td>14 Jun 2025</td>
+                <td><em>This House</em> <em>would</em> lower the voting age to 16.</td>
+                <td>Youth</td>
+                <td>Junior</td>
+                <td>
+                    <button class="action-button view-button">View</button>
+                    <button class="action-button delete-button">Delete</button>
+                </td>
+            </tr>
+            <tr data-category="economics-trade" data-difficulty="intermediate" data-date="2025-06-13">
+                <td>13 Jun 2025</td>
+                <td><em>This House</em> <em>would</em> implement a universal basic income.</td>
+                <td>Economics & trade</td>
+                <td>Intermediate</td>
+                <td>
+                    <button class="action-button view-button">View</button>
+                    <button class="action-button delete-button">Delete</button>
+                </td>
+            </tr>
+            <tr data-category="international-relations" data-difficulty="senior" data-date="2025-06-12">
+                <td>12 Jun 2025</td>
+                <td><em>This House</em> <em>would</em> abolish the UN Security Council's veto power.</td>
+                <td>International relations</td>
+                <td>Senior</td>
+                <td>
+                    <button class="action-button view-button">View</button>
+                    <button class="action-button delete-button">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="button-center">
+    <button>Clear All History</button>
+</div>
+
 {% endblock %}

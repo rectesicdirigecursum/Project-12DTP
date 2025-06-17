@@ -51,12 +51,17 @@ em {
 .infoslide {
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 400;
     text-align: center;
     line-height: 2rem;
     padding-left: 10rem;
     padding-right: 10rem;
     color: var(--platinum);
+}
+
+.infoslide em {
+    font-weight: 700;
+    font-style: normal;
 }
 
 .infoslide * {
@@ -158,41 +163,47 @@ footer p {
     color: var (--silver-lake-blue);
 }
 
-.menu-container {
+.dropdown-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: flex-end;
     padding-left: 15rem;
     padding-right: 15rem;
     margin-top: 2rem;
     margin-bottom: 5rem;
+    gap: 3rem;
 }
 
-.menu-group {
+.dropdown-group {
     color: var(--silver-lake-blue);
     display: flex;
     flex-direction: row;
     align-items: center;
     min-width: 200px;
-    gap: 0.5rem;
+    gap: 1rem;
+    justify-content: center;
 }
 
-.menu-group.left {
+.dropdown-group.left {
     justify-content: flex-start;
 }
 
-.menu-group.right {
+.dropdown-group.center {
+    justify-content: center;
+}
+
+.dropdown-group.right {
     justify-content: flex-end;
 }
 
-.menu-group label {
+.dropdown-group label {
     font-weight: 500;
     font-size: 16px;
     white-space: nowrap;
     text-align: center;
 }
 
-.menu-group select {
+.dropdown-group select {
     color: var(--silver-lake-blue);
     background-color: var(--rich-black);
     border: 2px solid var(--oxford-blue);
@@ -204,19 +215,86 @@ footer p {
     transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
-.menu-group select:hover {
+.dropdown-group select:hover {
     border-color: var(--yinmn-blue);
     background-color: var(--oxford-blue);
 }
 
-.menu-group select:focus {
+.dropdown-group select:focus {
     outline: none;
     border-color: var(--yinmn-blue);
     background-color: var(--oxford-blue);
 }
 
-.menu-group select option {
+.dropdown-group select option {
     background-color: var(--oxford-blue);
     color: var(--platinum);
     padding: 8px;
+}
+
+/* Motion history */
+.history-container {
+    margin-left: 6rem;
+    margin-right: 6rem;
+    margin-bottom: 3rem;
+    margin-top: 0rem;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Inter', sans-serif;
+    color: var(--platinum);
+}
+
+.history-table th,
+.history-table td {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid var(--oxford-blue);
+}
+
+.history-table th {
+    background-color: var(--oxford-blue);
+    font-weight: 600;
+    color: var(--platinum);
+    position: sticky;
+    top: 0;
+}
+
+.history-table tr:hover {
+    background-color: rgba(27, 38, 59, 0.3);
+}
+
+.history-table td {
+    background-color: transparent;
+}
+
+.action-button {
+    color: var(--silver-lake-blue);
+    background-color: var(--rich-black);
+    border: 2px solid var(--oxford-blue);
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    margin-bottom: 0.3rem;
+    width: 80px;
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.action-button:hover {
+    border-color: var(--yinmn-blue);
+    background-color: var(--oxford-blue);
+}
+
+.view-button, .delete-button{
+    border-color: var(--silver-lake-blue);
+}
+
+.delete-button:hover {
+    border-color: #dc3545;
+    color: #dc3545;
+    background-color: rgba(220, 53, 69, 0.1);
 }
