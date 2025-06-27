@@ -1,3 +1,81 @@
 {% extends 'layout.html' %}
 {% block content %}
+
+<!-- Similar to the history page, but it will only display motions that the user has flagged.  -->
+<!-- Flagged items will be sorted by date. The user has the option to delete flagged motions. -->
+
+<div class="motion">
+    <p>Flagged Motions</p>
+</div>
+
+<div class="dropdown-container">
+    <div class="dropdown-group left">
+        <label for="sort-by">Sort by:</label>
+        <select id="sort-by" name="sort-by">
+            <option value="date">Date (Newest first)</option>
+            <option value="date-old">Date (Oldest first)</option>
+        </select>
+    </div>
+</div>
+
+<div class="history-container">
+    <table class="history-table">
+        <thead>
+            <tr>
+                <th>Date Flagged</th>
+                <th>Motion</th>
+                <th>Category</th>
+                <th>Difficulty</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-date="2025-06-25">
+                <td>25 Jun 2025</td>
+                <td><em>This House</em> <em>would</em> ban the use of facial recognition technology in public spaces.</td>
+                <td>Technology & innovation</td>
+                <td>Senior</td>
+                <td>
+                    <button class="action-button view-button">View</button>
+                    <button class="action-button delete-button">Unflag</button>
+                </td>
+            </tr>
+            <tr data-date="2025-06-22">
+                <td>22 Jun 2025</td>
+                <td><em>This House</em> <em>would</em> make climate change education mandatory in all schools.</td>
+                <td>Environment</td>
+                <td>Intermediate</td>
+                <td>
+                    <button class="action-button view-button">View</button>
+                    <button class="action-button delete-button">Unflag</button>
+                </td>
+            </tr>
+            <tr data-date="2025-06-20">
+                <td>20 Jun 2025</td>
+                <td><em>This House</em> <em>would</em> abolish standardized testing in primary education.</td>
+                <td>Youth</td>
+                <td>Junior</td>
+                <td>
+                    <button class="action-button view-button">View</button>
+                    <button class="action-button delete-button">Unflag</button>
+                </td>
+            </tr>
+            <tr data-date="2025-06-18">
+                <td>18 Jun 2025</td>
+                <td><em>This House</em> <em>would</em> implement a wealth tax on billionaires.</td>
+                <td>Economics & trade</td>
+                <td>Intermediate</td>
+                <td>
+                    <button class="action-button view-button">View</button>
+                    <button class="action-button delete-button">Unflag</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="button-center">
+    <button>Clear All Flagged</button>
+</div>
+
 {% endblock %}
