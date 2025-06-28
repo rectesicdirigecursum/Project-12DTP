@@ -1,18 +1,23 @@
 {% extends 'layout.html' %}
 {% block content %}
 
-<!-- The login page -->
+<!-- The registration page -->
 
 <div class="motion">
-    <p>Login</p>
+    <p>Sign Up</p>
 </div>
 
 <div class="login-container">
     <div class="login-form">
-        <form method="POST" action="/login">
+        <form method="POST" action="/register">
             <div class="form-group">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
             </div>
             
             <div class="form-group">
@@ -20,14 +25,18 @@
                 <input type="password" id="password" name="password" required>
             </div>
             
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            
             <div class="button-center">
-                <button type="submit">Login</button>
+                <button type="submit">Create Account</button>
             </div>
         </form>
         
         <div class="login-links">
-            <p>Don't have an account? <a href="/register">Sign up here</a></p>
-            <p><a href="/forgot-password">Forgot your password?</a></p>
+            <p>Already have an account? <a href="/login">Login here</a></p>
         </div>
     </div>
 </div>

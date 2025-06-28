@@ -298,3 +298,65 @@ footer p {
     color: #dc3545;
     background-color: rgba(220, 53, 69, 0.1);
 }
+
+/* Login */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding: 2rem;
+}
+
+.login-form {
+    background-color: var(--oxford-blue);
+    padding: 3rem;
+    border-radius: 12px;
+    border: 2px solid var(--yinmn-blue);
+    max-width: 400px;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--platinum);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.form-group input {
+    color: var(--platinum);
+    background-color: var(--rich-black);
+    border: 2px solid var(--silver-lake-blue);
+    margin-bottom: 0;
+}
+
+.form-group input:focus {
+    border-color: var(--yinmn-blue);
+}
+
+.login-links {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.login-links p {
+    margin-bottom: 0.5rem;
+    color: var(--silver-lake-blue);
+    font-size: 14px;
+}
+
+.login-links a {
+    color: var(--platinum);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.login-links a:hover {
+    color: var(--silver-lake-blue);
+}
